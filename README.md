@@ -1,4 +1,4 @@
-# Snake game
+# Snake game - Coming Soon
 ----------------------------------------------------------------------
 
 **This is a simple 8 bit snake game created using HTML5 and javascript.**
