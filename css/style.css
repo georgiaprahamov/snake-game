@@ -1,0 +1,56 @@
+* {
+  font-weight: 900;
+  font-family: Bahnschrift;
+}
+
+.home {
+      width: 350px;
+      height: 350px;
+      background-image: url('../img/snake.png');
+      background-size: auto 350px;
+      background-repeat: no-repeat;
+      background-color: rgb(74, 226, 123);
+      background-position: center center;
+      padding: 0;
+      margin: 03;
+
+    }
+    
+    .center {
+      position: absolute;
+      top: 370px;
+      left: 130px;
+    }
+    
+    button {
+      background-color: rgb(15, 220, 15);
+      color: white;
+      border: none;
+      bottom: 0;
+      height: 30px;
+      font-size: 12pt;
+      float: left;
+      width: 90px;
+      margin: 10px 0 0 0;
+      border-radius: 2vh;
+    }
+    button:hover {
+      background-color: rgb(104, 237, 104);
+      border-radius: 2vh;
+    }
+
+    button:disabled {
+      background-color: grey;
+    }
+
+    p {
+      font-weight: 900;
+      width: 250px;
+      margin: 18px 0 5px 8px;
+      float: left;
+    }
+
+    .game {
+      margin: 0 auto;
+    }
+
