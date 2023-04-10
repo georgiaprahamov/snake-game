@@ -1,48 +1,19 @@
-# Snake game - Coming Soon
+# Snake Game
 ----------------------------------------------------------------------
 
-**This is a simple 8 bit snake game created using HTML5 and javascript.**
+<p>This is a simple implementation of the classic snake game in JavaScript. The game is played on a canvas element on a web page. The user controls the movement of the snake using the arrow keys on their keyboard. The objective of the game is to eat the food that appears on the canvas without colliding with the walls or the snake's own body.</p>
 
-The important thing to know before start is that our snake is formed by a chain of elements (squares) and that the movement is allowed by moving the last square of the snake body to the front of it. 
+<h3>How to Play</h3>
+<li>Clone or download this repository to your local machine</li>
+<li>Open index.html in a web browser</li>
+<li>Use the arrow keys to control the movement of the snake</li>
+<li>Eat the food that appears on the canvas without colliding with the walls or the snake's own body</li>
 
-## Explanation on JS file
+<h3>Code Review</h3>
 
-### Draw the snake with canvas:
+The game logic is implemented in **snake.js**. The game uses a module pattern to encapsulate its variables and functions. The module exposes an **init** function that initializes the game and starts the game loop. The game loop calls the **paint** function, which updates the state of the game and renders the canvas.
 
-```js
-  function bodySnake(x, y) {
-        ctx.fillStyle = 'green';
-        ctx.fillRect(x*snakeSize, y*snakeSize, snakeSize, snakeSize);
-        ctx.strokeStyle = 'darkgreen';
-        ctx.strokeRect(x*snakeSize, y*snakeSize, snakeSize, snakeSize);
-  }
-```
+The **paint** function updates the position of the snake based on the user's input and checks for collisions with the walls, the snake's own body, and the food. If the snake collides with the walls or its own body, the game is over. If the snake collides with the food, the snake grows in size and the player's score increases.
 
-### The structure of the snake:
+The game uses the HTML5 canvas element to render the game. The canvas is divided into a grid of cells, and each cell represents a unit of the snake's body or the food.
 
-```js
-  function drawSnake() {
-      var length = 4;
-      snake = [];
-      for (var i = length-1; i>=0; i--) {
-          snake.push({x:i, y:0});
-      }  
-  }
-```
-### The movement of the snake:
-
-```js
-      var snakeX = snake[0].x;
-      var snakeY = snake[0].y;
-
-      if (direction == 'right') { 
-        snakeX++; }
-      else if (direction == 'left') { 
-        snakeX--; }
-      else if (direction == 'up') { 
-        snakeY--; 
-      } else if(direction == 'down') { 
-        snakeY++; }
-```
-
-**Have Fun**
